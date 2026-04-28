@@ -1,0 +1,6 @@
+docs/
+data/               
+*.jsonl             
+.DS_Store
+.vscode/
+.idea/
