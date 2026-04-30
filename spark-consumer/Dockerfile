@@ -6,12 +6,10 @@ ENV PYSPARK_PYTHON=/usr/local/bin/python
 
 WORKDIR /app
 
-# Java 설치
 RUN apt-get update && apt-get install -y --no-install-recommends \
     openjdk-17-jre-headless \
     && rm -rf /var/lib/apt/lists/*
 
-# PySpark 및 파이썬 라이브러리 설치
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
@@ -29,5 +27,4 @@ RUN python -c "from pyspark.sql import SparkSession; \
 
 COPY consumer.py .
 
-# 실행 (spark-submit 대신 python으로 직접 실행해도 PySpark가 동일하게 처리)
 CMD ["python", "-u", "consumer.py"]
