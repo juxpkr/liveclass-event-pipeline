@@ -25,7 +25,7 @@
 docker compose up -d --build
 ```
 
-서비스가 순서대로 뜨는 데 약 1~2분이 소요됩니다. Gold 테이블은 spark-consumer가 Silver를 먼저 적재한 이후 gold-processor가 처음 실행될 때 생성됩니다. 대시보드에 데이터가 표시되기까지 최초 실행 후 약 1~2분을 기다려야 합니다.
+서비스가 순서대로 뜨는 데 약 1\~2분이 소요됩니다. Gold 테이블은 spark-consumer가 Silver를 먼저 적재한 이후 gold-processor가 처음 실행될 때 생성됩니다. 대시보드에 데이터가 표시되기까지 최초 실행 후 약 1\~2분을 기다려야 합니다.
 
 ### 2.3. 접근 주소
 
@@ -128,7 +128,7 @@ class_view -> purchase (35%) -> video_play (75%) -> video_complete (55%)
 | 이상치 유형 | 비율 | 내용 |
 |---|---|---|
 | invalid | 3% | null 필드, 알 수 없는 event_type, purchase에 price 누락 |
-| late_arrival | 5% | 3~10분 지연된 event_time |
+| late_arrival | 5% | 3\~10분 지연된 event_time |
 | duplicate | 2% | 동일 이벤트 재발행 |
 
 ### 5.2. Bronze (원본 보존)
